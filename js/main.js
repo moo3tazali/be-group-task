@@ -26,6 +26,13 @@ document.getElementById('backdrop').addEventListener('click', () => {
   drawer.classList.remove('open');
 });
 
+// Event listener for drawer close after clicking on link
+document.getElementById('drawer-close').addEventListener('click', (e) => {
+  if (e.target.tagName !== 'A') return;
+  const drawer = document.getElementById('drawer');
+  drawer.classList.remove('open');
+});
+
 // Hide splash screen after all content is loaded
 window.addEventListener('load', () => {
   const splashScreen = document.getElementById('splash-screen');
