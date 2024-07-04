@@ -1,0 +1,385 @@
+<!-- cSpell: disable -->
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- LOGO -->
+    <link rel="icon" type="image/svg+xml" href="../public/logo.svg" />
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="./css/fonts.css" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/6a21fca87b.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اعمال | معهد الإدارة العامة</title>
+  </head>
+  <body class="position-relative no-scroll">
+    <!-- SPLASH SCREEN -->
+    <div id="splash-screen" class="splash-screen">
+      <img src="../public/logo.webp" alt="logo" />
+      <h1>معهد الإدارة العامة</h1>
+      <p>اهلا بك 😊</p>
+    </div>
+    <!-- HEADER -->
+    <header class="w-100 text-white">
+      <!-- Contact navbar -->
+      <div class="border-bottom border-white">
+        <nav
+          class="contact-nav container d-flex justify-content-between fw-bold position-relative"
+        >
+          <!-- Contact Email & phone -->
+
+          <div class="email-phone d-flex align-items-center gap-3 h-100">
+            <span class="d-flex gap-2 align-items-center">
+              <a href="mailto:customers@ipa.edu.sa"> Customers@ipa.edu.sa </a>
+              <i class="fa-solid fa-envelope text-primary"></i>
+            </span>
+
+            <span class="vertical-line"></span>
+
+            <span class="d-flex gap-2 align-items-center">
+              <a href="tel:+966123456789"> 966123456789 </a>
+              <i class="fa-solid fa-phone text-primary"></i>
+            </span>
+          </div>
+
+          <!-- Contact social links -->
+          <div class="social d-flex align-items-center gap-3">
+            <span class="text-primary">تابعنا علي :</span>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </nav>
+      </div>
+
+      <!-- navbar -->
+      <nav
+        class="container navbar d-flex align-items-center justify-content-between position-relative h-fit fw-bold"
+      >
+        <!-- LOGO -->
+        <img src="../public/logo.webp" alt="اعمال" class="ms-2 ms-lg-0" />
+
+        <!-- NAV LINKS -->
+        <div class="nav-links d-flex align-items-center gap-4">
+          <ul class="d-flex gap-4 align-items-center fs-6">
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#about-section">عن المعهد</a></li>
+            <li><a href="#certifications-section">الشهادات الإحترافية</a></li>
+            <li><a href="#">المكتبة الإعلامية</a></li>
+            <li><a href="#lastNews-section">أخبار المعهد</a></li>
+            <li><a href="#">الإستفسارات</a></li>
+          </ul>
+          <div class="d-flex gap-1">
+            <button
+              class="btn btn-outline-primary d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-globe fs-5"></i>
+            </button>
+            <button class="btn btn-primary fw-bold">دخول</button>
+            <button class="btn btn-primary fw-bold">مستخدم جديد</button>
+          </div>
+        </div>
+
+        <!-- MOBILE NAV -->
+        <div class="mobile-nav-links d-block d-xl-none">
+          <button
+            id="drawer-toggle"
+            class="btn btn-outline-light d-flex justify-content-center align-items-center me-2"
+          >
+            <i class="fa-solid fa-bars fs-4"></i>
+          </button>
+        </div>
+      </nav>
+      <div id="drawer" class="drawer">
+        <div class="p-3 text-center">
+          <img src="../public/logo.webp" alt="اعمال" />
+        </div>
+
+        <ul>
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#about-section">عن المعهد</a></li>
+          <li><a href="#certifications-section">الشهادات الإحترافية</a></li>
+          <li><a href="#">المكتبة الإعلامية</a></li>
+          <li><a href="#lastNews-section">أخبار المعهد</a></li>
+          <li><a href="#">الإستفسارات</a></li>
+        </ul>
+        <div class="d-flex flex-column gap-2 p-4">
+          <button class="btn btn-primary fw-bold">دخول</button>
+          <button class="btn btn-primary fw-bold">مستخدم جديد</button>
+          <button
+            class="btn btn-outline-primary d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-solid fa-globe fs-5"></i>
+          </button>
+        </div>
+        <div id="backdrop" class="backdrop" />
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- HERO SECTION -->
+      <div class="bg-image">
+        <section
+          class="hero h-100 d-flex justify-content-center align-items-center position-relative"
+        >
+          <h1 class="text-white px-4">
+            شهادات إحترافية تنمي الموارد البشرية
+            <br />
+            وتلحق بها نحو المستقبل الواعد.
+          </h1>
+        </section>
+      </div>
+
+      <!-- CERTIFICATIONS SECTION -->
+      <section
+        id="certifications-section"
+        class="bg-primary section-padding certifications-section position-relative"
+      >
+        <div class="section-heading">
+          <h3 class="text-primary fw-bold">الشهادات الاحترافية</h3>
+          <h2 class="text-secondary fw-bold">
+            الشهادات المقدمة من قبل مركز الاعمال
+          </h2>
+        </div>
+
+        <div
+          id="certifications"
+          class="certifications custom-container px-1 px-sm-4"
+        >
+          <!-- Card rendering here -->
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+          <button id="load-more" class="btn btn-primary fw-bold">
+            عرض جميع الشهادات
+          </button>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about-section" class="section-padding">
+        <div
+          class="container d-flex gap-5 align-items-center justify-content-center"
+        >
+          <div class="about-img">
+            <img src="../public/about.webp" loading="lazy" alt="about" />
+          </div>
+          <div class="flex-grow-1 mw-md-50" style="width: 100%">
+            <div class="section-heading text-md-start">
+              <h3 class="text-primary fw-bold">كل شىء عن المعهد</h3>
+              <h2 class="text-secondary fw-bold">
+                معهد الإدارة العامة
+                <br />
+                بالتعاون مع مركز ريادة الأعمال
+              </h2>
+            </div>
+            <p class="text-body-secondary mb-4 text-center text-md-start">
+              إن الرؤية الطموحة للملكة العربية السعودية 2030 تمثل تحديا تاريخيا
+              لبناء وتطوير القيادات الإدارية لذلك قدمت أكادمية تطوير القيادة
+              مجموعة من الحلول والبرامج القيادية لبناء وتطوير كافة مستويات
+              القيادات الإدارية لتتولي قيادة مسارات التنمية الشاملة والانطلاق
+              بها نحو المستقبل الواعد.
+            </p>
+            <ul class="row fw-bold ps-5">
+              <li class="col-md-6">سهولة</li>
+              <li class="col-md-6">مدربون احترافيون</li>
+              <li class="col-md-6">عشرات التخصصات</li>
+              <li class="col-md-6">شهادات معتمدة</li>
+            </ul>
+            <button
+              class="btn btn-outline-dark mt-5 border border-secondary-subtle fw-bold rounded-3 d-md-inline d-block mx-auto"
+            >
+              عرض المزيد من التفاصيل
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+      <section>
+        <div class="testimonials-bg">
+          <div
+            class="container position-relative d-flex align-items-center justify-content-around flex-column flex-md-row h-100 text-white"
+          >
+            <div class="text-center">
+              <span class="fw-bold fs-1">10,000</span>
+              <span class="fs-3">+</span>
+              <span class="d-block fs-5">عدد المدربين</span>
+            </div>
+            <div class="text-center">
+              <span class="fw-bold fs-1">45,000</span>
+              <span class="fs-3">+</span>
+              <span class="d-block fs-5">عدد المتدربين</span>
+            </div>
+            <div class="text-center">
+              <span class="fw-bold fs-1">28,000</span>
+              <span class="fs-3">+</span>
+              <span class="d-block fs-5">عدد الشهادات</span>
+            </div>
+            <div class="text-center">
+              <span class="fw-bold fs-1">74</span>
+              <span class="fs-3">%</span>
+              <span class="d-block fs-5">معدل الرضا</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LASTNEWS SECTION -->
+      <section id="lastNews-section" class="section-padding bg-secondary">
+        <div class="container">
+          <div class="section-heading">
+            <h3 class="text-primary fs-6">الأخبار</h3>
+            <h2 class="text-secondary fw-bold">اخر أخبار مركز الأعمال</h2>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="lastNews-section-cards">
+              <div class="card p-0 mb-3 position-relative">
+                <img
+                  src="../public/news/news1.webp"
+                  class="card-img-top"
+                  alt="news"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <span
+                    class="btn btn-primary rounded-5 shadow-lg position-absolute top-0 start-0 m-3"
+                    >معرفة</span
+                  >
+                  <span class="d-block fs-6 text-secondary">ابريل.2023</span>
+                  <p class="py-2 text-secondary fw-bold fs-4 mt-1">
+                    برعاية سمو أمير نجران، لقاء تطوير القيادات الشابة<br />
+                    بالشراكة مع إمارة منطقة نجران
+                  </p>
+
+                  <a href="#" class="btn btn-link text-black">
+                    عرض المزيد <i class="fa-solid fa-arrow-left-long"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card p-0 mb-3 position-relative">
+                <img
+                  src="../public/news/news2.webp"
+                  class="card-img-top"
+                  alt="news"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <span
+                    class="btn btn-primary rounded-5 shadow-lg position-absolute top-0 start-0 m-3"
+                    >تكنولوجيا</span
+                  >
+                  <span class="d-block fs-6 text-secondary">يوليو.2023</span>
+                  <p class="py-2 text-secondary fw-bold fs-4 mt-1">
+                    معهد الإدارة العامة ينظم ملتقي إدارة المنظمات في القطاع غير
+                    الربحي
+                  </p>
+
+                  <a href="#" class="btn btn-link text-black">
+                    عرض المزيد <i class="fa-solid fa-arrow-left-long"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card p-0 mb-3 position-relative">
+                <img
+                  src="../public/news/news3.webp"
+                  class="card-img-top"
+                  alt="news"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <span
+                    class="btn btn-primary rounded-5 shadow-lg position-absolute top-0 start-0 m-3"
+                    >رياضة</span
+                  >
+                  <span class="d-block fs-6 text-secondary">يناير.2024</span>
+                  <p class="py-2 text-secondary fw-bold fs-4 mt-1">
+                    معالي الأمين العام لمجلس التعاون لدول الخليج العربية يزور
+                    معهد الإدارة العامة
+                  </p>
+
+                  <a href="#" class="btn btn-link text-black">
+                    عرض المزيد <i class="fa-solid fa-arrow-left-long"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 my-3">
+            <h5>تصفح</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">الرئيسية</a></li>
+              <li><a href="#">عنا</a></li>
+              <li><a href="#">ميديا</a></li>
+              <li><a href="#">إتصل بنا</a></li>
+              <li><a href="#">الأخبار</a></li>
+            </ul>
+            <div class="social-icons d-flex mt-3">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <h5>الشهادات</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">شهادة المدقق الداخلي المعتمد CIA</a></li>
+              <li><a href="#">شهادة محترف ادوبى للتصميم ACP</a></li>
+              <li><a href="#">شهادة الحاسب الآلي CBP-CT</a></li>
+              <li><a href="#">شهادة إدارة المشاريع PMP</a></li>
+              <li><a href="#">شهادات الأمن السيبراني</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <h5>خليك علي تواصل</h5>
+
+            <p>
+              <i class="fa-solid fa-location-dot text-primary"></i>
+              الرياض. جدة
+              <br />المملكة العربية السعودية
+            </p>
+
+            <p><i class="fas fa-phone-alt text-primary"></i> 8001248877</p>
+            <p>
+              <i class="fas fa-envelope text-primary"></i>
+              <a href="mailto:Customers@ipa.edu.sa">Customers@ipa.edu.sa</a>
+            </p>
+          </div>
+
+          <div class="col-md-3 my-3">
+            <img src="./public/logo.webp" alt="Logo" class="img-fluid mb-3" />
+            <p>لدينا الكثير من الشهادات الاحترافية والبرامج المتعددة</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <p>
+            All Rights Reserved Institute of Public Administration. Developed
+            And Designed By BeGroup.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
