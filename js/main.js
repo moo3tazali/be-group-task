@@ -38,7 +38,6 @@ window.addEventListener('load', () => {
   const splashScreen = document.getElementById('splash-screen');
   setTimeout(() => {
     splashScreen.style.display = 'none';
-    window.scrollTo(0, 0);
     document.body.classList.remove('no-scroll');
   }, 2000);
 });
