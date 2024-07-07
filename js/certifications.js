@@ -100,7 +100,7 @@ export function renderCertifications() {
     );
     card.innerHTML = `
       <img
-        src="./certifications/${certification.id}.webp"
+        src="./public/certifications/${certification.id}.webp"
         class="card-img-top"
         alt="${certification.name}"
         loading="lazy"

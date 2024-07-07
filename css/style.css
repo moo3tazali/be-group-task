@@ -72,7 +72,7 @@ ul {
 
 /* Background Image */
 .bg-image {
-  background-image: url('../hero-bg-image.webp');
+  background-image: url('../public/hero-bg-image.webp');
   height: 60vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -214,11 +214,11 @@ header {
 }
 .certifications-section::before {
   top: 0;
-  background-image: url('../certification-section-banners-top.webp');
+  background-image: url('../public/certification-section-banners-top.webp');
 }
 .certifications-section::after {
   bottom: 0;
-  background-image: url('../certification-section-banners.webp');
+  background-image: url('../public/certification-section-banners.webp');
 }
 
 .card-text {
@@ -296,7 +296,7 @@ header {
 
 /* Testimonials Section */
 .testimonials-bg {
-  background-image: url('../testimonials-section-background.webp');
+  background-image: url('../public/testimonials-section-background.webp');
   height: 350px;
   background-repeat: no-repeat;
   background-size: cover;
