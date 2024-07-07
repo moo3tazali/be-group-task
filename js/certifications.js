@@ -77,33 +77,60 @@ export const certifications = [
 ];
 
 const certificationsContainer = document.getElementById('certifications');
+const loadMoreButton = document.getElementById('load-more');
+
+let displayedCount = 0;
+const limit = 4;
 
 // Function to render certifications
-export function renderCertifications(limit) {
-  certificationsContainer.innerHTML = '';
-  for (let i = 0; i < limit && i < certifications.length; i++) {
-    const certification = certifications[i];
-    certificationsContainer.innerHTML += `
-      <div class="card p-0 mb-3 rounded-4">
-        <img
-          src="./public/certifications/${certification.id}.webp"
-          class="card-img-top"
-          alt="${certification.name}"
-          loading="lazy"
-        />
-        <div class="card-body">
-          <h4 class="card-title text-center text-secondary">${certification.name}</h4>
-          <p class="card-text text-center">
-            ${certification.description}
-          </p>
-          <a
-            href="#"
-            style="width: fit-content"
-            class="btn btn-outline-dark mt-5 rounded-3 border d-block mx-auto border-secondary-subtle fw-bold"
-            >تعرف علي المزيد</a
-          >
-        </div>
+export function renderCertifications() {
+  const toDisplay = certifications.slice(
+    displayedCount,
+    displayedCount + limit
+  );
+
+  toDisplay.forEach((certification) => {
+    const card = document.createElement('div');
+    card.classList.add(
+      'card',
+      'certification-card',
+      'p-0',
+      'mb-3',
+      'rounded-4'
+    );
+    card.innerHTML = `
+      <img
+        src="./certifications/${certification.id}.webp"
+        class="card-img-top"
+        alt="${certification.name}"
+        loading="lazy"
+      />
+      <div class="card-body">
+        <h4 class="card-title text-center text-secondary">${certification.name}</h4>
+        <p class="card-text text-center">
+          ${certification.description}
+        </p>
+        <a
+          href="#"
+          style="width: fit-content"
+          class="btn btn-outline-dark mt-5 rounded-3 border d-block mx-auto border-secondary-subtle fw-bold"
+          >تعرف علي المزيد</a
+        >
       </div>
-    `;
+  `;
+
+    certificationsContainer.appendChild(card);
+    // Trigger the animation
+    setTimeout(() => {
+      card.classList.add('visible');
+    }, 100);
+  });
+
+  displayedCount += toDisplay.length;
+  if (displayedCount >= certifications.length) {
+    loadMoreButton.style.display = 'none';
   }
 }
+
+// Event listener for Load More button
+loadMoreButton.addEventListener('click', renderCertifications);

@@ -65,31 +65,14 @@ ul {
   padding: 100px 0;
 }
 
-/* Splash Screen */
-body.no-scroll {
-  overflow: hidden;
-}
-.splash-screen {
-  height: 100vh;
-  background-color: #08bab6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
-.splash-screen img {
-  width: 200px;
-  margin-bottom: 20px;
+.section-heading {
+  text-align: center;
+  padding: 50px 0;
 }
 
 /* Background Image */
 .bg-image {
-  background-image: url('../public/hero-bg-image.webp');
+  background-image: url('../hero-bg-image.webp');
   height: 60vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,7 +108,7 @@ header {
 .contact-nav {
   height: 60px;
 }
-.contact-nav i {
+.contact-nav svg {
   font-size: 22px;
   transition: all 0.2s;
 }
@@ -144,11 +127,11 @@ header {
   height: 90%;
   background-color: #fff;
 }
-.contact-nav .social i {
+.contact-nav .social svg {
   cursor: pointer;
 }
-.contact-nav .social i:hover,
-.contact-nav .email-phone span:hover i {
+.contact-nav .social svg:hover,
+.contact-nav .email-phone span:hover svg {
   scale: 1.2;
 }
 
@@ -209,14 +192,11 @@ header {
   z-index: -1;
 }
 
-/* Hero */
-.hero h1 {
-  font-size: 44px;
-  line-height: 1.5;
-}
-@media (max-width: 768px) {
+/* Hero Section */
+
+@media (min-width: 768px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 32px !important;
   }
 }
 
@@ -234,16 +214,13 @@ header {
 }
 .certifications-section::before {
   top: 0;
-  background-image: url('../public/certification-section-banners-top.webp');
+  background-image: url('../certification-section-banners-top.webp');
 }
 .certifications-section::after {
   bottom: 0;
-  background-image: url('../public/certification-section-banners.webp');
+  background-image: url('../certification-section-banners.webp');
 }
-.section-heading {
-  text-align: center;
-  padding: 50px 0;
-}
+
 .card-text {
   height: 170px;
 }
@@ -251,6 +228,17 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+}
+
+.certification-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.certification-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* About Section */
@@ -308,7 +296,7 @@ header {
 
 /* Testimonials Section */
 .testimonials-bg {
-  background-image: url('../public/testimonials-section-background.webp');
+  background-image: url('../testimonials-section-background.webp');
   height: 350px;
   background-repeat: no-repeat;
   background-size: cover;

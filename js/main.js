@@ -1,18 +1,8 @@
 // cSpell: disable
-import { renderCertifications, certifications } from './certifications.js';
+import { renderCertifications } from './certifications.js';
 
-const loadMoreButton = document.getElementById('load-more');
-let visibleCount = 6;
-
-// Initial render
-renderCertifications(visibleCount);
-
-// Event listener for Load More button
-loadMoreButton.addEventListener('click', () => {
-  visibleCount = certifications.length;
-  renderCertifications(visibleCount);
-  loadMoreButton.style.display = 'none';
-});
+// Initial render of certifications
+document.addEventListener('DOMContentLoaded', renderCertifications);
 
 // Event listener for drawer toggle
 document.getElementById('drawer-toggle').addEventListener('click', () => {
@@ -36,8 +26,14 @@ document.getElementById('drawer-close').addEventListener('click', (e) => {
 // Hide splash screen after all content is loaded
 window.addEventListener('load', () => {
   const splashScreen = document.getElementById('splash-screen');
+  if (!splashScreen) return;
+
+  splashScreen.style.transition = 'opacity 0.5s';
+  splashScreen.style.opacity = '0';
   setTimeout(() => {
-    splashScreen.style.display = 'none';
-    document.body.classList.remove('no-scroll');
-  }, 2000);
+    splashScreen.remove();
+    document.querySelector('header').classList.remove('hidden');
+    document.querySelector('main').classList.remove('hidden');
+    document.querySelector('footer').classList.remove('hidden');
+  }, 500);
 });
