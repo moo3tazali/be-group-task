@@ -106,7 +106,7 @@ export function renderCertifications() {
         loading="lazy"
       />
       <div class="card-body">
-        <h5 class="card-title text-center text-secondary">${certification.name}</h5>
+        <h4 class="card-title fs-4 text-center text-secondary">${certification.name}</h4>
         <p class="card-text text-center">
           ${certification.description}
         </p>
